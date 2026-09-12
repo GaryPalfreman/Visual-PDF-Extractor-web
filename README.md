@@ -7,16 +7,22 @@ Streamlit web conversion of the original Tkinter Visual PDF Extractor.
 - Upload one or more PDF files
 - Render visual page previews in the browser
 - Select individual pages from each source PDF
+- Select all / select none for each PDF
+- Add or remove page ranges such as `1,3,5-8`
 - Combine selected pages from multiple PDFs
-- Reorder selected output pages
-- Remove selected pages before export
-- Preview the final output order
+- Drag-and-drop the final output order
+- Move pages up/down manually as a fallback
+- Remove selected output pages before export
+- Intentionally duplicate an output page when required
+- Warn when duplicate source pages are present in the final output
+- Preview the complete combined PDF page-by-page in final output order
+- Choose the output filename
 - Download one combined PDF
 - Dark Streamlit interface
 
 ## Important fix from the desktop version
 
-The original desktop program appended the final temporary page twice when saving the combined PDF. The web version builds the output directly from the selected source pages and does not duplicate the last page.
+The original desktop program appended the final temporary page twice when saving the combined PDF. The web version builds the output directly from the selected source pages and does not duplicate the last page unless the user deliberately chooses `Duplicate output page`.
 
 ## Privacy / storage
 
@@ -29,4 +35,4 @@ Because this is a web-hosted Streamlit application, uploaded PDFs are transmitte
 - Repository: `GaryPalfreman/Visual-PDF-Extractor-web`
 - Branch: `main`
 - Main file path: `app.py`
-
+- Live app: `https://visual-pdf-extractor-web.streamlit.app`
